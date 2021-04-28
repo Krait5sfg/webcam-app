@@ -13,4 +13,8 @@ startBtn.addEventListener('click', () => {
     .catch(err => {
       console.log(err);
     });
+
+  const buttonElement = document.createElement('button');
+  buttonElement.textContent = 'Snapshot';
+  document.body.append(buttonElement);
 });
