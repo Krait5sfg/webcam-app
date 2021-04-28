@@ -17,6 +17,6 @@ startBtn.addEventListener('click', () => {
   document.getElementById('startSnapshot').classList.remove('hidden');
   document.getElementById('startSnapshot').addEventListener('click', () => {
     const picture = webcam.snap();
-    document.querySelector('#download-photo').href = picture;
+    document.querySelector('#canvas').href = picture;
   });
 });
