@@ -14,7 +14,9 @@ startBtn.addEventListener('click', () => {
       console.log(err);
     });
 
-  const buttonElement = document.createElement('button');
-  buttonElement.textContent = 'Snapshot';
-  document.body.append(buttonElement);
+  document.getElementById('startSnapshot').classList.remove('hidden');
+  document.getElementById('startSnapshot').addEventListener('click', () => {
+    const picture = webcam.snap();
+    document.querySelector('#download-photo').href = picture;
+  });
 });
